@@ -11,6 +11,7 @@ public class BonesBroken {
 		System.out.println("How many bones have you broken?");
 		brokenBones = input.nextInt();
 		System.out.println("You have broken " + brokenBones + " bones.");
+		input.close();
 
 	}
 

@@ -14,7 +14,7 @@ public class PasswordGenerator {
 		second = input.nextByte();
 		System.out.println("Type in a final one digit number:");
 		third = input.nextByte();
-		System.out.println("All possible combinations are:\n");
+		System.out.println("Your password options are:\n "+ first +""+ second+ ""+ third +"");
 		input.close();
 	}
 

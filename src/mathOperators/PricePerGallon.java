@@ -20,6 +20,9 @@ public class PricePerGallon {
 		moneySpent =  input.nextDouble();
 		totGallons = distance/mpg;
 		gasAvg = moneySpent/totGallons;
+		System.out.println("You traveled " + distance + " miles.");
+		System.out.println("You used " + totGallons + " gallons of gas.");
+		System.out.println("You spent $" + moneySpent + " on gas.");
 		System.out.println("The average cost of gas per gallon on your trip was $" + gasAvg);
 		
 		input.close();

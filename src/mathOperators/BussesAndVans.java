@@ -17,6 +17,8 @@ public class BussesAndVans {
 		leftOver = people%busCap;
 		System.out.println("You will need " + bus + " buses," );
 		System.out.println("and you will need vans for " + leftOver + " people");
+		input.close();
+			
 		
 	}
 

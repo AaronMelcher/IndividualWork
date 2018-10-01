@@ -21,7 +21,7 @@ public class ChangeActivity {
 		change = change-.25*quarters;
 		dimes = (int)Math.floor((change/.1));
 		change = change - .1*dimes;
-		nickels = (int)Math.floor((change/0.5));
+		nickels = (int)Math.floor((change/0.05));
 		change = change-.5*nickels;
 		pennies = (int)Math.round((change/.01));
 		System.out.println("You'll need "+ dollars +" dollars, "+quarters+" quarters, "+dimes+ " dimes, "+nickels+" nickels, "+pennies+" pennies.");

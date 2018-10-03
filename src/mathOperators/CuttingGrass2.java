@@ -14,7 +14,7 @@ public class CuttingGrass2 {
 		double passes;
 		double timePass;
 		double time;
-		double pay;
+		int pay;
 		final int RATE = 12;
 		System.out.println("What is the legnth of the lawn (in feet)?");
 		length = input.nextDouble();
@@ -29,7 +29,7 @@ public class CuttingGrass2 {
 		width = width/5280;
 		timePass = width/mph;
 		time = timePass * passes;
-		pay = time * RATE;
+		pay = (int)Math.round(time * RATE);
 		System.out.println("It will take "+time+" hours to mow the lawn,\nand the person mowing the lawn is owed $"+pay);
 		
 		

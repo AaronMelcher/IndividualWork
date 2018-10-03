@@ -31,9 +31,6 @@ public class CuttingGrass2 {
 		time = timePass * passes;
 		pay = (int)Math.round(time * RATE);
 		System.out.println("It will take "+time+" hours to mow the lawn,\nand the person mowing the lawn is owed $"+pay);
-		
-		
-		
 		input.close();
 	}
 

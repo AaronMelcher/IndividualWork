@@ -19,6 +19,17 @@ public class HomeImprovement {
 	double sand = input.nextDouble();
 	double hours = volume/sand;
 	System.out.println("It will take "+hours+" hours to fill the sandbox");
-	input.close();
+	}
+	public void fill2(double length, double width, double depth, double sand)
+	{
+		double volume = length*width*depth;
+		double rate = volume/sand;
+		System.out.println("The time it will take to fill the sandbox is "+rate+" hours.");	
+	}
+	public double fill3(double length, double width, double depth, double sand)
+	{
+		double volume = length*width*depth;
+		double rate = volume/sand;
+		return rate;
 	}
 }

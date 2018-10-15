@@ -17,4 +17,19 @@ public class Numbers {
 		int result = num + num2;
 		System.out.println(result);
 	}
+	public double returnSquare(double num)
+	{
+		double numFinal = Math.pow(num, 2);
+		return numFinal;
+	}
+	public double area(double length, double width)
+	{
+		double result = length*width;
+		return result;
+	}
+	public int roundUp(double num)
+	{
+		int round = (int)Math.ceil(num);
+		return round;
+	}
 }

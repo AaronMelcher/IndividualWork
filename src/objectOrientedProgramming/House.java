@@ -17,18 +17,19 @@ public class House {
 		System.out.println("The total time to paint the wall is "+minutes+" minutes.");
 		input.close();
 	}
-	public void plantGarden()
+	public void plantGarden(int rows)
 	{
 		Scanner input = new Scanner(System.in);
 		System.out.println("What is the length of the garden (in feet)?");
 		double length = input.nextDouble();
 		double hours = (length/15)*2;
-		System.out.println("The total time it will take is "+hours+" hours.");
+		System.out.println("The total time it will take is "+hours+" hours. \n And the number of rows is "+rows);
 		input.close();
 	}
-	public void fillPool()
+	public void fillPool(double hours, double radius, double height)
 	{
-		Scanner input = new Scanner(System.in);
-		System.out.println("");
+		System.out.println("It will take "+hours+" hours to fill the pool.");
+		System.out.println("The radius is "+radius+" feet.");
+		System.out.println("The height is "+height+" feet.");
 	}
 }

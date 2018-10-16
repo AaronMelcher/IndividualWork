@@ -1,5 +1,7 @@
 package objectOrientedProgramming;
+
 import java.util.Scanner;
+
 public class HITest {
 
 	public static void main(String[] args) {
@@ -25,7 +27,7 @@ public class HITest {
 		System.out.println("Ammount of sand (cubic feet) transported per hour:");
 		double sand2 = input.nextDouble();
 		double rate = bob.fill3(length2, width2, depth2, sand2);
-		System.out.println("The time it will take to fill the sandbox is "+rate+" hours");
+		System.out.println("The time it will take to fill the sandbox is " + rate + " hours");
 	}
 
 }

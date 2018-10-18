@@ -7,6 +7,10 @@ public class Rectangle {
 		length = -99.99;
 		width = -999.99;
 }
+	public Rectangle(double newL, double newW) {
+		length = newL;
+		width = newW;
+	}
 	public double getLength() {
 		return length;
 	}

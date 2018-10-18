@@ -3,7 +3,9 @@ package objectOrientedProgramming;
 public class Circle {
 	private double radius;
 	public Circle() {
-		radius = -999.99;
+	}
+	public Circle(double newR) {
+		radius = newR;
 	}
 	public double getRadius() {
 	return radius;

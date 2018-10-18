@@ -5,6 +5,10 @@ public class Worker {
 	private double wage;
 	public Worker() {
 	}
+	public Worker(int newH, double newW) {
+		hours = newH;
+		wage = newW;
+	}
 	public int getHours() {
 		return hours;
 	}

@@ -10,6 +10,12 @@ private double height;
 		base = newB;
 		height = newH;
 	}
+	public void changeBase(double newB) {
+		base = newB;
+	}
+	public void changeHeight(double newH) {
+		height = newH;
+	}
 	public double hypot() {
 		double hypot = Math.hypot(base, height);
 		return hypot;

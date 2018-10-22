@@ -20,8 +20,8 @@ public class BankTest {
 		fred.withdraw(1000);
 		bob.addInterest(12);
 		fred.financeCharge(250);
-		System.out.println("Savings account balance:"+bob.getBalance());
-		System.out.println("Checking account balance"+fred.getBalance());
+		System.out.println("Savings account balance: $"+bob.getBalance());
+		System.out.println("Checking account balance $"+fred.getBalance());
 		input.close();
 	}
 

@@ -1,20 +1,33 @@
 package objectOrientedProgramming;
 
 public class Car {
-	public Car()
-	{
+	private double mPG;
+	private double tankCapacity;
+	private double fuel;
+	private double odometer;
+	public Car() {
+		mPG = 20;
+		tankCapacity = 20;
+		fuel = 20;
+		odometer = 0;
 	}
-	
-	public void sayOdometer()
-	{
-		System.out.println("The car has traveled 118,810 miles.");
+	public Car(double xMPG, double xCapacity, double xFuel, double xOdometer) {
+		mPG = xMPG;
+		tankCapacity = xCapacity;
+		fuel = xFuel;
+		odometer = xOdometer;
 	}
-	public void sayFlat()
-	{
-		System.out.println("You have a flat tire.");		
+	public void fill(double gallons) {
+		fuel += gallons;
 	}
-	public void sayThirsty()
-	{
-		System.out.println("The tank is empty, time to fill up!");
+	public void drive(double xMiles) {
+		odometer += xMiles;
+		fuel -= (xMiles/mPG);
+	}
+	public double getFuel() {
+		return fuel;
+	}
+	public double getOdometer() {
+		return odometer;
 	}
 }

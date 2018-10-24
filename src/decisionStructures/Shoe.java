@@ -7,11 +7,11 @@ public class Shoe {
 		Scanner input = new Scanner(System.in);
 		double height;
 		double shoeSize;
-		System.out.println("What is your height?");
+		System.out.println("What is your height(ft)?");
 		height = input.nextDouble();
 		System.out.println("What is your shoe size?");
 		shoeSize = input.nextDouble();
-		System.out.println(height + shoeSize > 26);
+		System.out.println(height + shoeSize >= 26);
 		input.close();
 	}
 

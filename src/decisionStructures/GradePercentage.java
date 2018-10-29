@@ -20,11 +20,13 @@ public class GradePercentage {
 			System.out.println("How many points did you earn for extra credit?");
 			double points = input.nextDouble();
 			double avgEC = ((score1+score2+score3)/3)+points;
-			System.out.println("Average with EC: "+avgEC);
+			System.out.println("Average: "+avgEC);
 		}
+		if (extraCred == false) {
 		double avg = ((score1+score2+score3)/3);
-		System.out.println("Average without EC:"+avg);
+		System.out.println("Average: "+avg);
+		
+	}	
 		input.close();
 	}
-
 }

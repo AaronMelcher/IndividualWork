@@ -1,5 +1,7 @@
 package decisionStructures;
+
 import java.util.Scanner;
+
 public class PostIt {
 
 	public static void main(String[] args) {
@@ -10,7 +12,7 @@ public class PostIt {
 		double numPost;
 		System.out.println("Choose an option: \n1. Feet \n2. Inches");
 		int choice = input.nextInt();
-		switch(choice) {
+		switch (choice) {
 		case 1:
 			System.out.println("Enter length of the rectangle in FEET:");
 			length = input.nextDouble();
@@ -18,20 +20,21 @@ public class PostIt {
 			System.out.println("Enter the width of the rectangle in FEET:");
 			width = input.nextDouble();
 			width *= 12;
-		break;
+			break;
 		case 2:
 			System.out.println("Enter the length of the rectangle in INCHES:");
 			length = input.nextDouble();
 			System.out.println("Enter the width of the rectangle in INCHES:");
 			width = input.nextDouble();
 			break;
-			default:
-				System.out.println("Please choose a menu option correctly...");
-				length = 9;
-				width = 9;
+		default:
+			System.out.println("Please choose a menu option correctly...");
+			length = 9;
+			width = 9;
+			break;
 		}
-		numPost = (length*width)/9;
-		System.out.println("You will need "+ numPost +" post-its.");
+		numPost = (length * width) / 9;
+		System.out.println("You will need " + numPost + " post-its.");
 		input.close();
 	}
 

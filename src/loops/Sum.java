@@ -13,10 +13,12 @@ public class Sum {
 		int num2 = input.nextInt();
 		do {
 			System.out.println("Sum: "+(num1+num2));
-			System.out.println("Enter a number:");
+			System.out.println("Enter a number (999 to quit):");
 			num1 = input.nextInt();
+			if(num1 != 999) {
 			System.out.println("Enter another number:");
 			num2 = input.nextInt();
+			}
 		} while (num1 != 999);
 		{
 

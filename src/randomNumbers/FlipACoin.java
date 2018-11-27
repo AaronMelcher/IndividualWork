@@ -11,9 +11,9 @@ public class FlipACoin {
 		int max = 2;
 		int heads = 0;
 		int tails = 0;
-		int largest = 0;
-		int smallest = 999;
-		int percent = 0;
+		double largest = 0;
+		double smallest = 999;
+		double percent = 0;
 		for (int j = 1; j <= 1000; j++) {
 			for (int i = 1; i <= 100000; i++) {
 				int ranNum = min + bob.nextInt(max - min + 1);
@@ -23,7 +23,7 @@ public class FlipACoin {
 				if (ranNum == 2) {
 					tails++;
 				}
-				percent = (heads * 100) / 100000;
+				percent = (heads / 100000.0) * 100;
 				if (percent > largest) {
 					largest = percent;
 				}
@@ -31,6 +31,7 @@ public class FlipACoin {
 					smallest = percent;
 				}
 			}
+			heads = 0;
 		}
 		System.out.println("Largest: " + largest);
 		System.out.println("Smallest: " + smallest);

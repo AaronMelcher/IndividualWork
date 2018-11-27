@@ -23,17 +23,17 @@ public class FlipACoin {
 				if (ranNum == 2) {
 					tails++;
 				}
-				percent = (heads / 100000.0) * 100;
-				if (percent > largest) {
-					largest = percent;
-				}
-				if (percent < smallest) {
-					smallest = percent;
-				}
+			}
+			percent = (heads / 100000.0) * 100;
+			if (percent > largest) {
+				largest = percent;
+			}
+			if (percent < smallest) {
+				smallest = percent;
 			}
 			heads = 0;
 		}
-		System.out.println("Largest: " + largest);
-		System.out.println("Smallest: " + smallest);
+		System.out.println("Largest: " + largest + "%");
+		System.out.println("Smallest: " + smallest + "%");
 	}
 }

@@ -47,7 +47,13 @@ public class RollADie2 {
 		System.out.print(fours + " ");
 		System.out.print(fives + " ");
 		System.out.print(sixes + " ");
+		System.out.println(" ");
 		System.out.println(ones*100 / rolls);
+		System.out.println(twos*100 / rolls);
+		System.out.println(threes*100 / rolls);
+		System.out.println(fours*100 / rolls);
+		System.out.println(fives*100 / rolls);
+		System.out.println(sixes*100 / rolls);
 		input.close();
 	}
 

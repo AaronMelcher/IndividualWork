@@ -9,9 +9,11 @@ public class StringExample {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Age?");
 		int age = input.nextInt();
+		input.nextLine(); // used to clear the string buffer
 		System.out.println("Full Name?");
 		String name = input.nextLine();
 		System.out.println(age);
+		System.out.println(name);
 		input.close();
 	}
 

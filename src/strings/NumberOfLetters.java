@@ -13,10 +13,10 @@ public class NumberOfLetters {
 		int con = 0;
 		int punc = 0;
 		for (int j = 0; j < bob.length(); j++) {
-			if (bob.charAt(j) == 'a' && bob.charAt(j) == 'e' && bob.charAt(j) == 'o' && bob.charAt(j) == 'i'
-					&& bob.charAt(j) == 'u') {
+			if (bob.charAt(j) == 'a' || bob.charAt(j) == 'e' || bob.charAt(j) == 'o' || bob.charAt(j) == 'i'
+					|| bob.charAt(j) == 'u') {
 				vowels++;
-				if(bob.charAt(j) == ) {
+				if(bob.charAt(j) == ' ' || bob.charAt(j) == '.' || bob.charAt(j) == ',') {
 					punc++;
 				}
 			} else {

@@ -16,7 +16,7 @@ public class NumberOfLetters {
 			if (bob.charAt(j) == 'a' || bob.charAt(j) == 'e' || bob.charAt(j) == 'o' || bob.charAt(j) == 'i'
 					|| bob.charAt(j) == 'u') {
 				vowels++;
-				if(bob.charAt(j) == ' ' || bob.charAt(j) == '.' || bob.charAt(j) == ',') {
+				if(bob.charAt(j) == '?' || bob.charAt(j) == '.' || bob.charAt(j) == ',') {
 					punc++;
 				}
 			} else {

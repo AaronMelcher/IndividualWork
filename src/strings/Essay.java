@@ -17,7 +17,7 @@ public class Essay {
 	}
 
 	public String capital() {
-		String bob = name.substring(name.indexOf(' '));
+		String bob = name.substring((name.indexOf(' ')+1));
 		return bob.toUpperCase();
 	}
 
@@ -39,11 +39,15 @@ public class Essay {
 
 	public int numEssay() {
 		int words = 0;
-		for (int j = 0; j < text.length(); j++) {
-			if (text.charAt(j) == ' ') {
-				words++;
+		boolean contin = true;
+		for (int j = 0; contin;) {
+			String full = text.substring(j);
+			if (!(full.contains(" "))) {
+				contin = false;
 			}
+			words++;
+			j += full.indexOf(32) + 1;
 		}
-		return words+1;
+		return words + 1;
 	}
 }

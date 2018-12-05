@@ -21,12 +21,14 @@ public class StringTestTest {
 				xPass = input.nextLine();
 				xPass = xPass.substring(xPass.indexOf(":") + 1);
 			}
-			if (bob.setPass(xPass) == true) {
-				flag1 = true;
-				valid++;
-			} else {
-				valid++;
-				System.out.println("Invalid password, please try again");
+			if (flag1 == false) {
+				if (bob.setPass(xPass) == true) {
+					flag1 = true;
+					valid++;
+				} else {
+					valid++;
+					System.out.println("Invalid password, please try again");
+				}
 			}
 			if (flag1 == true && flag2 == false) {
 				System.out.println("Please confirm your password.");

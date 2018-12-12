@@ -30,4 +30,12 @@ public class Friend {
 		age = a;
 	}
 
+	public boolean search(String fn, String ln, int a) {
+		if (name.substring(0, name.indexOf(" ")) == fn && name.substring(name.indexOf(" ") + 1) == ln && age == a) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 }

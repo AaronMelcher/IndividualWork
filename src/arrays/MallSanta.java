@@ -4,6 +4,11 @@ public class MallSanta {
 	private String name;
 	private int age;
 	private boolean record;
+	public MallSanta() {
+		name = "Bob";
+		age = 50;
+		record = false;
+	}
 	public MallSanta(String nameX, int ageX, boolean recordX) {
 		name = nameX;
 		age = ageX;

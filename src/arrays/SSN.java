@@ -13,8 +13,10 @@ public class SSN {
 		for(int i = 0; i < TOTAL; i++) {
 			System.out.println("Enter a SSN in the format ***-**-****");
 			ssn = input.nextLine();
-			
 		}
+		System.out.println(midSum[1]);
+		System.out.println(ssn);
+		input.close();
 	}
 
 }

@@ -22,18 +22,20 @@ public class MultiRollDie {
 				test[i][j] = min + bob.nextInt(max - min + 1);
 			}
 		}
-		int k = 0;
-		for(int i = 0; i < test.length; i++) {
-			System.out.println(" ");
-			System.out.println("Student "+ (k+1) + ": " + test[i][k] + " ");
-			k++;
-		}
+		System.out.println("Enter a value:");
+		int value = input.nextInt();
+		int count = 0;
 		System.out.println(" ");
 		for (int i = 0; i < test.length; i++) {
 			for (int j = 0; j < test[0].length; j++) {
 				System.out.print(test[i][j] + " ");
+				if(test[i][j] == value) {
+					count++;
+				}
 			}
+			System.out.println(" ");
 		}
+		System.out.println("Number of times " +value+ " appeared was "+count);
 		input.close();
 	}
 }

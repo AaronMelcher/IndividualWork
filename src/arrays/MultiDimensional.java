@@ -23,6 +23,7 @@ public class MultiDimensional {
 			for (int j = 0; j < COL; j++) {
 				System.out.print(num[i][j] + " ");
 			}
+			System.out.println(" ");
 		}
 		input.close();
 	}

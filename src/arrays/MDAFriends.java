@@ -16,7 +16,7 @@ public class MDAFriends {
 		Friend[][] age = new Friend[ROW][COL];
 		for (int i = 0; i < ROW; i++) {
 			for (int k = 0; k < COL; k++) {
-				age[i][k] = new Friend("a" ,min + bob.nextInt(max - min + 1));
+				age[i][k] = new Friend("a" , min + bob.nextInt(max - min + 1));
 			}
 		}
 		for (int i = 0; i < ROW; i++) {

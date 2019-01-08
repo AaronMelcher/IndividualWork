@@ -11,9 +11,10 @@ public class ArrayListExample1 {
 		Scanner input = new Scanner(System.in);
 		names.add("Bob");
 		names.add("Jane");
-		names.add(1, "Billy");
+		names.add(0, "Billy");
 		System.out.println("Enter your name");
 		names.add(input.nextLine());
+		names.remove(1);
 		for (int i = 0; i < names.size(); i++) {
 			System.out.println(names.get(i));
 		}

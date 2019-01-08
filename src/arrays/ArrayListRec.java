@@ -14,6 +14,8 @@ public class ArrayListRec {
 		for (int i = 0; i < 400; i++) {
 			shapes.add(new Rectangle(min + bob.nextInt(max - min + 1), min + bob.nextInt(max - min + 1)));
 		}
+		Rectangle add = shapes.remove(shapes.size()-1);
+		shapes.set(0, add);
 		for (int j = shapes.size() - 1; j >= 0; j--) {
 			System.out.println(shapes.get(j).area());
 		}

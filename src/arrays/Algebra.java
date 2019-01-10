@@ -34,22 +34,23 @@ public class Algebra {
 			if (remove.compareTo(algebra.get(l).returnName()) == 0) {
 				algebra.remove(l);
 			}
-			for (int k = 0; k < algebra.size(); k++) {
-				if (algebra.get(k).returnScore() > high) {
-					nameH = algebra.get(k).returnName();
-					high = algebra.get(k).returnScore();
-				}
-				if (algebra.get(k).returnScore() < low) {
-					nameL = algebra.get(k).returnName();
-					low = algebra.get(k).returnScore();
-				}
-			}
-			for (int j = 0; j < algebra.size(); j++) {
-				System.out.println(algebra.get(j).returnName() + " " + algebra.get(j).returnScore());
-			}
-			System.out.println("Student with highest score: " + nameH);
-			System.out.println("Student with the lowest score: " + nameL);
-			input.close();
 		}
+		for (int k = 0; k < algebra.size(); k++) {
+			if (algebra.get(k).returnScore() > high) {
+				nameH = algebra.get(k).returnName();
+				high = algebra.get(k).returnScore();
+			}
+			if (algebra.get(k).returnScore() < low) {
+				nameL = algebra.get(k).returnName();
+				low = algebra.get(k).returnScore();
+			}
+		}
+		for (int j = 0; j < algebra.size(); j++) {
+			System.out.println(algebra.get(j).returnName() + " " + algebra.get(j).returnScore());
+		}
+		System.out.println("Student with highest score: " + nameH);
+		System.out.println("Student with the lowest score: " + nameL);
+		input.close();
+
 	}
 }

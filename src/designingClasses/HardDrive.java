@@ -18,10 +18,10 @@ public class HardDrive {
 	public void addFile(double xSize) {
 		if (free >= xSize) {
 			fileSpace.add(xSize);
-			capacity -= xSize;
+			free -= xSize;
 		} else {
 			fileSpace.add(xSize);
-			capacity = 0;
+			free = 0;
 		}
 	}
 

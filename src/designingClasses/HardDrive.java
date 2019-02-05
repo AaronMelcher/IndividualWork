@@ -39,8 +39,6 @@ public class HardDrive {
 	}
 
 	public boolean isEmpty() {
-		
-		
 		if (free == capacity) {
 			return true;
 		} else {

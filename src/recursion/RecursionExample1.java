@@ -10,7 +10,11 @@ public class RecursionExample1 {
 			System.out.println("Hello");
 			printHello(how - 1);
 		}
-		System.out.println(how + " ends");
-		System.out.println("Goodbye");
+	}
+	public int returnNum(int cool) {
+		if(cool > 0) {
+			return(cool + returnNum(cool-1));
+		}
+		return 0;
 	}
 }

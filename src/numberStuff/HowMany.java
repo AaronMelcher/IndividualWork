@@ -20,7 +20,7 @@ public class HowMany {
 					count++;
 				}
 			}
-			System.out.println("The number, " + i + " is in the array, " + count + " times");
+			System.out.println("The number, " + i + " is in the array, " + count + " time(s)");
 			count = 0;
 		}
 	}

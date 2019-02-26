@@ -14,8 +14,8 @@ public class CatTest2 {
 		for (int i = 0; i < 100; i++) {
 			cats.add(new CatStart(min + bob.nextInt(max - min + 1), min + bob.nextInt(max - min + 1)));
 		}
-		CatStart small = new CatStart(5, 6);
-		CatStart large = cats.get(cats.size() - 1);
+		CatStart small = cats.get(0);
+		CatStart large = cats.get(0);
 		for (CatStart temp : cats) {
 			if (small.compareTo(temp) < 0) {
 				small = temp;

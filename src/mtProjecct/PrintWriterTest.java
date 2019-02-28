@@ -12,11 +12,8 @@ public class PrintWriterTest {
 		Scanner input = new Scanner(gamer);
 		PrintWriter output = new PrintWriter(gamer2);
 		System.out.println("Type something");
-		String test = input.nextLine();
+		String test = input2.nextLine();
 		output.print(test);
-		output.print("Hello");
-		output.print(" ");
-		output.println("Hello World");
 		input.close();
 		output.close();
 		input2.close();

@@ -4,7 +4,7 @@ public class ResumeTest {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		ResumeClass bob = new ResumeClass("see");
+		ResumeClass bob = new ResumeClass("is");
 		bob.search();
 		System.out.println(bob.getNum());
 	}

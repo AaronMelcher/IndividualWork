@@ -22,14 +22,16 @@ public class ResumeClass {
 	}
 
 	public void search() {
-		if(check.hasNext(word) == true) {
-			count++;
+		String bob = check.nextLine();
+		String[] words = bob.split(bob);
+		for (int i = 0; i < words.length; i++) {
+			if (word.equals(words[i])) {
+				count++;
+			}
 		}
 	}
+
 	public int getNum() {
 		return count;
-	}
-	public String toString() {
-		return check.nextLine();
 	}
 }

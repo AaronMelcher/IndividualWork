@@ -31,6 +31,10 @@ public class ResumeClass {
 		}
 	}
 
+	public String getWord() {
+		return word;
+	}
+
 	public int getNum() {
 		return count;
 	}

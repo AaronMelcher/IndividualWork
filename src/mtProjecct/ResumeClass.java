@@ -17,25 +17,31 @@ public class ResumeClass {
 
 	public ResumeClass(String xWord) throws IOException {
 		count = 0;
-		check = new Scanner(resume);
 		word = xWord;
+		check = new Scanner(resume);
+
 	}
 
 	public void search() {
 		String bob = check.nextLine();
-		String[] words = bob.split(bob);
-		for (int i = 0; i < words.length; i++) {
-			if (word.equals(words[i])) {
+		String[] words = bob.split(" ");
+		for (String temp : words) {
+			if (temp.compareToIgnoreCase(word) == 0) {
 				count++;
 			}
 		}
-	}
-
-	public String getWord() {
-		return word;
+		check.close();
 	}
 
 	public int getNum() {
 		return count;
+	}
+
+	public boolean exist() {
+		return resume.exists();
+	}
+
+	public String word() {
+		return word;
 	}
 }

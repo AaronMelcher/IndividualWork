@@ -11,16 +11,16 @@ public class ResumeTest {
 		Scanner input = new Scanner(System.in);
 		System.out.println("How many words do you want to search for?");
 		int num = input.nextInt();
-		input.next();
 		int i = 0;
+		input.nextLine();
 		while (i < num) {
 			System.out.println("Enter your word:");
-			String bob = input.nextLine();
-			searching.add(new ResumeClass(bob));
+			searching.add(new ResumeClass(input.nextLine()));
 			i++;
 		}
 		for (ResumeClass temp : searching) {
-			System.out.println(temp.getNum() + " appears " + temp.getNum() + " times");
+			temp.search();
+			System.out.println(temp.word() + " appears " + temp.getNum() + " times");
 		}
 		input.close();
 	}

@@ -11,7 +11,4 @@ public abstract class TrainCar {
 		return baseWeight;
 	}
 
-	public  abstract double  getTotalWeight() {
-		
-	}
 }

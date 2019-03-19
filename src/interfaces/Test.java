@@ -13,6 +13,10 @@ public class Test {
 		double width = input.nextDouble();
 		ShapeInterface bob = new Rectangle(length, width);
 		System.out.println("Area: " + bob.area() + " Perimeter: " + bob.perimeter());
+		System.out.println("Enter a radius:");
+		double radius = input.nextDouble();
+		ShapeInterface fred = new Circle(radius);
+		System.out.println("Area: " + fred.area() + " Circumference: " + fred.perimeter());
 		input.close();
 	}
 

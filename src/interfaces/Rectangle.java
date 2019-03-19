@@ -1,6 +1,6 @@
 package interfaces;
 
-public class Rectangle implements Test1 {
+public class Rectangle implements ShapeInterface{
 	private double length;
 	private double width;
 

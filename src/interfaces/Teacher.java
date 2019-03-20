@@ -1,6 +1,6 @@
 package interfaces;
 
-public class Teacher {
+public class Teacher implements Person {
 	String name;
 	int teacherAge;
 	boolean gender; // true = male
@@ -28,9 +28,9 @@ public class Teacher {
 		if (name.indexOf(" ") < 0)
 			name = " " + name;
 		if (gender)
-			return ("Mr. " + name.substring(name.indexOf(" ")));
+			return ("Mr." + name.substring(name.indexOf(" ")));
 		else
-			return ("Mrs. " + name.substring(name.indexOf(" ")));
+			return ("Mrs." + name.substring(name.indexOf(" ")));
 
 	}
 
@@ -43,6 +43,6 @@ public class Teacher {
 	}
 
 	public String toString() {
-		return "Teacher" + name + teacherAge + gender + bankBalance + payCheck;
+		return "Teacher:" + name + " " + teacherAge + " " + gender + " " + bankBalance + " " + payCheck;
 	}
 }

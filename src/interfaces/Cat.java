@@ -1,14 +1,24 @@
 package interfaces;
 
-public class Cat implements Animal{
+import java.util.Random;
+
+public class Cat implements Animal {
 	private String name;
 	private int age;
 	private boolean friendly;
 
 	public Cat() {
+		Random bob = new Random();
 		name = "God Himself";
 		age = 4;
-		friendly = true;
+		int max = 2;
+		int min = 1;
+		int num = min + bob.nextInt(max - min + 1);
+		if (num == 1) {
+			friendly = true;
+		} else {
+			friendly = false;
+		}
 	}
 
 	public void act() {
@@ -21,7 +31,7 @@ public class Cat implements Animal{
 	}
 
 	public String toString() {
-		return "Name: " + name + " Age: " + age + " Injured: " + friendly;
+		return "Name: " + name + " Age: " + age + " Friendly: " + friendly;
 	}
 
 	public boolean isFriendly() {

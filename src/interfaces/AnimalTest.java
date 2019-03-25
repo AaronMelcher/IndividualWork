@@ -24,7 +24,7 @@ public class AnimalTest {
 				((Dog) temp).vet();
 			}
 		}
-		for (int i = pets.size() - 1; i > 0; i--) {
+		for (int i = pets.size() - 1; i >= 0; i--) {
 			if (pets.get(i) instanceof Cat) {
 				if (!((Cat) pets.get(i)).isFriendly()) {
 					pets.remove(i);

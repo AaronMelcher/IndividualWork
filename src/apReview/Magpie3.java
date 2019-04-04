@@ -25,6 +25,10 @@ public class Magpie3 {
 		} else if (findKeyword(statement, "mother") >= 0 || findKeyword(statement, "father") >= 0
 				|| findKeyword(statement, "sister") >= 0 || findKeyword(statement, "brother") >= 0) {
 			response = "Tell me more about your family.";
+		} else if (findKeyword(statement, "dog") >= 0) {
+			System.out.println("Tell me about your dog.");
+		} else if (findKeyword(statement, "cat") >= 0) {
+			System.out.println("Tell me about your cat.");
 		} else {
 			response = getRandomResponse();
 		}

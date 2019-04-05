@@ -43,23 +43,27 @@ public class Magpie4 {
 		// Responses which require transformations
 		else if (findKeyword(statement, "I want to", 0) >= 0) {
 			response = transformIWantToStatement(statement);
-		} else if (findKeyword(statement, "smells bad", 0) >= 0) {
+			
+		} else if (findKeyword(statement, "smells bad", 0) > 0) {
 			response = transformSmellsBadStatement(statement);
+			
 		} else {
-			int psn2 = findKeyword(statement, "I cannot find", 0);
-			if (psn2 >= 0 && findKeyword(statement, "anywhere", psn2) >= 0) {
-				response = transformCantFind(statement);
+			// Look for a two word (you <something> me)
+			// pattern
+			int psn = findKeyword(statement, "you", 0);
+
+			if (psn >= 0 && findKeyword(statement, "me", psn) >= 0) {
+				response = transformYouMeStatement(statement);
+				
+			} else {
+				int psn2 = findKeyword(statement, "I cannot find", 0);
+				if (psn2 >= 0 && findKeyword(statement, "anywhere", psn2) >= 0) {
+					response = transformCantFind(statement);
+					
+				} else {
+					response = getRandomResponse();
+				}
 			}
-		}
-		// Look for a two word (you <something> me)
-		// pattern
-		int psn = findKeyword(statement, "you", 0);
-
-		if (psn >= 0 && findKeyword(statement, "me", psn) >= 0) {
-			response = transformYouMeStatement(statement);
-
-		} else {
-			response = getRandomResponse();
 		}
 		return response;
 	}
@@ -113,8 +117,8 @@ public class Magpie4 {
 			statement = statement.substring(0, statement.length() - 1);
 		}
 		int psn = findKeyword(statement, "smells bad", 0);
-		String restOfStatement = statement.substring(psn).trim();
-		return "I agree, " + restOfStatement + " smells bad.";
+		String restOfStatement = statement.substring(0, psn).trim();
+		return "I agree, " + restOfStatement + "  does smell bad.";
 	}
 
 	private String transformCantFind(String statement) {

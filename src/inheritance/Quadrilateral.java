@@ -1,16 +1,10 @@
 package inheritance;
 
 public class Quadrilateral {
-	private double side1;
-	private double side2;
-	private double side3;
-	private double side4;
+	private double side1, side2, side3, side4;
 
 	public Quadrilateral() {
-		side1 = 5;
-		side2 = 6;
-		side3 = 7;
-		side4 = 8;
+		side1 = side2 = side3 = side4 = 6;
 	}
 
 	public Quadrilateral(double s1, double s2, double s3, double s4) {

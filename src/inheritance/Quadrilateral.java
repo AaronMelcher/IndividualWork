@@ -73,4 +73,12 @@ public class Quadrilateral {
 	public double perimeter() {
 		return side1 + side2 + side3 + side4;
 	}
+
+	public String toString() {
+		return "Quadrilateral: Side1= " + side1 + " Side2= " + side2 + " Side3= " + side3 + " Side4= " + side4;
+	}
+
+	public boolean equals(Quadrilateral temp) {
+		return (this.toString().equals(temp.toString()));
+	}
 }

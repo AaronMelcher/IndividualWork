@@ -1,6 +1,6 @@
 package inheritance;
 
-public class Trapezoid extends Quadrilateral {
+public class Trapezoid extends Quadrilateral implements Geo{
 	private double height;
 
 	public Trapezoid() {

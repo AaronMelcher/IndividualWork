@@ -1,6 +1,6 @@
 package inheritance;
 
-public class Parallelogram extends Quadrilateral {
+public class Parallelogram extends Quadrilateral implements Geo {
 	private double height;
 
 	public Parallelogram() {
@@ -23,5 +23,9 @@ public class Parallelogram extends Quadrilateral {
 
 	public double area() {
 		return super.getSide2() * height;
+	}
+
+	public String toString() {
+		return "Parallelogram: Height= " + height + super.toString();
 	}
 }

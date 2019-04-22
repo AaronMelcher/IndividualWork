@@ -15,7 +15,7 @@ public class CompanyTest {
 		}
 		System.out.println("Enter a dollar ammount");
 		double raise = input.nextDouble();
-		employees.get(employees.size()).modRate(raise);
+		employees.get(employees.size() - 1).modRate(raise);
 		for (Employee temp : employees) {
 			System.out.println("Employee " + temp.getMyNum() + "; Week 3 Pay: " + temp.calcPay(3));
 		}

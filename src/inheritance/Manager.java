@@ -16,4 +16,8 @@ public class Manager extends Employee {
 	public double calculatePay(double h) {
 		return (1 + (lvl / 100)) * (super.getPay() * h);
 	}
+
+	public Manager clone() {
+		return new Manager(super.getName(), super.getPay(), lvl);
+	}
 }

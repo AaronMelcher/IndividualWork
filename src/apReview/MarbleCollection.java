@@ -24,11 +24,11 @@ public class MarbleCollection {
 			return 0;
 		}
 	}
-	
+
 	public int removeColor(String c) {
 		int tot = 0;
-		for(int i = 0; i < sets.size(); i++) {
-			if(sets.get(i).getColor().equals(c)) {
+		for (int i = sets.size() - 1; i >= 0; i--) {
+			if (sets.get(i).getColor().equals(c)) {
 				tot += sets.get(i).getNum();
 				sets.remove(i);
 			}

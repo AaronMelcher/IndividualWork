@@ -6,13 +6,13 @@ public class BinaryIntTest {
 		BinaryInt bob1 = new BinaryInt(301);
 		BinaryInt fred = new BinaryInt(210);
 		BinaryInt fred1 = new BinaryInt(212);
-		bob.switchType();
+		bob.switchType(); //switch to binary
 		bob1.switchType();
-		fred.switchType();
+		fred.switchType(); 
 		fred1.switchType();
-		bob.add(bob1.getNum());
+		bob.add(bob1.getNum()); //add two sets together
 		fred.add(fred1.getNum());
-		if (bob.getNum() > fred.getNum()) {
+		if (bob.getNum() > fred.getNum()) { // check to see which is larger
 			System.out.println(bob.getNum());
 		} else {
 			System.out.println(fred.getNum());

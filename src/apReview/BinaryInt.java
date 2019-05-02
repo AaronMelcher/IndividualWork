@@ -6,7 +6,6 @@ public class BinaryInt {
 
 	public BinaryInt() {
 		num = 0;
-		bin = "0";
 	}
 
 	public BinaryInt(int dec) {
@@ -14,15 +13,44 @@ public class BinaryInt {
 		num = dec;
 	}
 
-	public int add(int n) {
-		// math
-		return num + n;
+	public int setBin(int dec) {
+		num = dec == 0 ? 0 : dec % 2 + 10 * setBin(dec / 2);
+		return num;
 	}
 
-	public String switchType() {
-		// something to convert num to bin
+	public int add(int n) {
+		int sum = n + Integer.parseInt(num + "");
+		return Integer.valueOf(Integer.toBinaryString(sum));
+	}
+
+	public void switchType() {
 		String dig = "";
 		double num1 = num;
+		while (num1 > 0) {
+			if (num1 % 2 == 1) {
+				dig = "1";
+			} else {
+				dig = "0";
+			}
+			bin = dig + bin;
+			num1 /= 2;
+		}
+	}
+
+	public int check(int c) {
+		if (num > c) {
+			return -1;
+		}
+		if (c > num) {
+			return 1;
+		}
+		return 0;
+	}
+
+	public String createBinaryInt(int dec) {
+		String dig = "";
+		String bin = new String();
+		double num1 = dec;
 		while (num1 > 0) {
 			if (num1 % 2 == 1) {
 				dig = "1";
@@ -35,25 +63,11 @@ public class BinaryInt {
 		return bin;
 	}
 
-	public int check(int c) {
-		// would have stuff checking for equal, less, more
-		return 1;
-	}
-
-	public void createBinaryInt(int dec) {
-		String dig = "";
-		double num1 = dec;
-		while (num1 > 0) {
-			if (num1 % 2 == 1) {
-				dig = "1";
-			} else {
-				dig = "0";
-			}
-			bin = dig + bin;
-			num1 /= 2;
-		}
-	}
 	public int getNum() {
 		return num;
+	}
+	
+	public String getBin() {
+		return bin;
 	}
 }

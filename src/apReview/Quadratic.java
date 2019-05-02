@@ -36,13 +36,22 @@ public class Quadratic {
 		return "Quadratic " + temp;
 	}
 
-	public boolean hasRoots(int a, int b, int c) {
+	public boolean hasRoots(double a, double b, double c) {
 		return Math.pow(b, 2) - (4 * a * c) >= 0;
 	}
 
-	public double[] getRoots(int a, int b, int c) {
+	public double[] getRoots() {
 		double r1 = 0;
 		double r2 = 0;
+		double b = 0;
+		double c = 0;
+		double a = quad.get(0).getCoeff();
+		if (quad.get(1) != null) {
+			b = quad.get(1).getCoeff();
+		}
+		if (quad.get(2) != null) {
+			c = quad.get(2).getCoeff();
+		}
 		if (!this.hasRoots(a, b, c)) {
 			return null;
 		} else {

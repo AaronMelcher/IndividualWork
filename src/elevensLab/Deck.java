@@ -36,6 +36,7 @@ public class Deck {
 				cards.add(new Card(ranks[i], temp, values[i]));
 			}
 		}
+		size = cards.size();
 		this.shuffle();
 	}
 
@@ -45,7 +46,7 @@ public class Deck {
 	 * @return true if this deck is empty, false otherwise.
 	 */
 	public boolean isEmpty() {
-		return size <= 0;
+		return size == 0;
 	}
 
 	/**
@@ -72,7 +73,12 @@ public class Deck {
 	 *         dealt.
 	 */
 	public Card deal() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		if (this.isEmpty()) {
+			return null;
+		} else {
+			size--;
+			return cards.get(size);
+		}
 	}
 
 	/**

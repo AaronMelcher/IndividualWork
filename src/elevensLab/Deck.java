@@ -1,6 +1,7 @@
 package elevensLab;
 
 import java.util.List;
+import java.util.Random;
 import java.util.ArrayList;
 
 /**
@@ -63,7 +64,16 @@ public class Deck {
 	 * represent the entire deck.
 	 */
 	public void shuffle() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
+		Random bob = new Random();
+		Card temp = new Card("a", "b", 2);
+		int r = 0;
+		for (int k = cards.size() - 1; k >= 0; k--) {
+			r = bob.nextInt((k + 1));
+			temp = cards.get(k);
+			cards.set(k, cards.get(r));
+			cards.set(r, temp);
+		}
+		size = cards.size();
 	}
 
 	/**

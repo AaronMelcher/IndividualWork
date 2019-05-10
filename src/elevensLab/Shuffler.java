@@ -1,5 +1,7 @@
 package elevensLab;
 
+import java.util.Random;
+
 public class Shuffler {
 	/**
 	 * This class provides a convenient way to test shuffling methods.
@@ -78,16 +80,15 @@ public class Shuffler {
 	 * @param values is an array of integers simulating cards to be shuffled.
 	 */
 	public static void selectionShuffle(int[] values) {
-		int[] shuffled = new int[values.length];
-		int k = 0;
-		for (int i = 0; i < values.length; i++) {
-			do {
-				k = ((int) Math.random() * 51);
-			} while (shuffled[k] != 0);
-			shuffled[k] = values[i];
-		}
-		for (int o = 0; o < values.length; o++) {
-			values[o] = shuffled[o];
+		Random bob = new Random();
+		int temp = 0;
+		int r = 0;
+		for (int k = values.length - 1; k >= 0; k--) {
+			r = bob.nextInt((k + 1));
+			temp = values[r];
+			values[r] = values[k];
+			values[k] = temp;
 		}
 	}
+
 }

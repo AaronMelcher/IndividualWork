@@ -5,9 +5,9 @@ public class Example1Test {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		RecursionExample1 bob = new RecursionExample1();
-		bob.printHello(1);
+		bob.printHello(6);
 		System.out.println();
-		System.out.println(bob.returnNum(3));
+		System.out.println(bob.returnNum(6));
 	}
 
 }

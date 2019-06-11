@@ -1,5 +1,7 @@
 package comparableInterface;
+
 import java.util.Random;
+
 public class SortRanges {
 
 	public static void main(String[] args) {
@@ -9,11 +11,10 @@ public class SortRanges {
 		int min = 1;
 		int max = 100000;
 		int[] nums = new int[100];
-		for(int i = 0; i < size; i++) {
+		for (int i = 0; i < size; i++) {
 			nums[i] = min + bob.nextInt(max - min + 1);
 		}
-		JavaSorting robert = new JavaSorting();
-		robert.selectionSortAscending(nums);
+		JavaSorting.selectionSortAscending(nums);
 	}
 
 }
